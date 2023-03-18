@@ -11,4 +11,5 @@ Environmnet:
 > pip install -r requirements.txt 
 
 Run
-> python task_distributor_v1.py task_data.xlsx  
+> python task-distributor-v01.py task_data.xlsx  
+
