@@ -5,11 +5,12 @@
     output: csv file. 
 
 # Usage
-Environmnet:  
+## Environmnet:  
+Assuming conda ( [miniconda](https://docs.conda.io/en/latest/miniconda.html) ) is installed.   
 > conda create -n sch python=3.10  
 > conda activate sch   
 > pip install -r requirements.txt 
 
-Run
+## Run
 > python task-distributor-v01.py task_data.xlsx  
 
