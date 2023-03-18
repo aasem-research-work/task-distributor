@@ -8,8 +8,7 @@
 Environmnet:  
 > conda create -n sch python=3.10 
 > conda activate sch  
-> pip install pandas  
-> pip install numpy  
+> pip install -r requirements.txt 
 
 Run
 > python task_distributor_v1.py task_data.xlsx  
