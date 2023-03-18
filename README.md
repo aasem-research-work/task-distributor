@@ -6,8 +6,8 @@
 
 # Usage
 Environmnet:  
-> conda create -n sch python=3.10 
-> conda activate sch  
+> conda create -n sch python=3.10  
+> conda activate sch   
 > pip install -r requirements.txt 
 
 Run
