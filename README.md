@@ -3,3 +3,13 @@
     parameter: PLaPF (Pop Last and Push First). 
     input: xlsx file. 
     output: csv file. 
+
+# Usage
+Environmnet:  
+> conda create -n sch python=3.10 
+> conda activate sch  
+> pip install pandas  
+> pip install numpy  
+
+Run
+> python task_distributor_v1.py task_data.xlsx  
