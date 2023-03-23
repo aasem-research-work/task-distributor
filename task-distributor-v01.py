@@ -87,6 +87,49 @@ def PLaPF(task_data):
     print(f'std,avg: {get_avg(task_data)} \n _sum_ : {sum_all(task_data)}')
 
 
+def Cyclic_Slide(task_data):
+    epoch_rank = []
+
+    # get keys
+    for t in task_data.keys():
+        taskList.append(t)
+
+    # sort
+    #sort_all(task_data)
+    #print('sorting...')
+    #print(f'\tstd,avg: {get_avg(task_data)} \n\t_sum_ : {sum_all(task_data)}')
+
+    # Evaluate
+    print('Evaluating...')
+    epochs = len(taskList)*10
+    print(f'\trows: {len(taskList)}')
+    print(f'\tepochs: {epochs}')
+    #sort_all(task_data)
+    for e in range(epochs):
+        for t in range(len(taskList)):
+            for j in range(t):
+                pop_push(task_data[taskList[t]])
+
+        std, avg = get_avg(task_data)
+        epoch_rank.append(std)
+
+    # rank for best
+    best_epoch = np.argmin(epoch_rank)
+
+    print(
+        f'\tbest found at epoch at {best_epoch} epoch with std:{epoch_rank[best_epoch]}')
+
+    # show best
+    print('--- best combination ---')
+    #sort_all(task_data)
+    for e in range(5):
+        for t in range(len(taskList)):
+            for j in range(t):
+                pop_push(task_data[taskList[t]])
+
+    print(f'std,avg: {get_avg(task_data)} \n _sum_ : {sum_all(task_data)}')
+
+
 def main():
     # Check if an input file has been provided as an argument
     if len(sys.argv) < 2:
@@ -115,6 +158,8 @@ def main():
     print("___Process initiated!___")
     if (param['parameter'] == 'PLaPF'):
         PLaPF(task_data)
+    elif (param['parameter'] =='Cyclic_Slide'):
+        Cyclic_Slide(task_data)
 
     # step 3: Dump the best one
 
