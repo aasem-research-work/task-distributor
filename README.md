@@ -1,4 +1,4 @@
-# Task Distributor V01
+# Task Distributor
     Description: This script assigns the tasks to the available slots in the most uniform distribution feasible.  
     parameter: PLaPF (Pop Last and Push First). 
     input: xlsx file. 
@@ -11,6 +11,9 @@ Assuming conda ( [miniconda](https://docs.conda.io/en/latest/miniconda.html) ) i
 > conda activate sch   
 > pip install -r requirements.txt 
 
-## Run
-> python task-distributor-v01.py task_data.xlsx  
+## Run  
+To generate output with enum applied:    
+`python task-distributor-v02.py input=task_data.xlsx enum=true`
 
+To generate output without enum applied:   
+`python task-distributor-v02.py input=task_data.xlsx enum=false`
