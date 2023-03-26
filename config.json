@@ -1,6 +1,6 @@
 {   "parameters available":["Cyclic_Slide","PLaPF"],
     "parameter":"Cyclic_Slide",
-    "output_file":"output1.csv",
+    "epoch_multiplier":20,
     "enum":{
             "A":12,
             "SA":6,
