@@ -1,9 +1,14 @@
-import sys
 import os
+import sys
+import warnings
 import json
-import numpy as np
-import pandas as pd
 from openpyxl import load_workbook
+import pandas as pd
+import numpy as np
+from tqdm import tqdm
+
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 
 excel_file_path = ""
 taskList = []
@@ -111,7 +116,8 @@ def Cyclic_Slide(task_data, epoch_multiplier):
     epochs = len(taskList)*epoch_multiplier
     print(f'\trows: {len(taskList)}')
     print(f'\tepochs: {epochs}')
-    for e in range(epochs):
+
+    for e in tqdm(range(epochs)):
         for t in range(len(taskList)):
             for j in range(t):
                 pop_push(task_data[taskList[t]])
@@ -127,7 +133,7 @@ def Cyclic_Slide(task_data, epoch_multiplier):
 
     # show best
     print('--- best combination ---')
-    for e in range(5):  # Just how fist file rows for display purpose
+    for e in tqdm(range(5)):  # Just how fist file rows for display purpose
         for t in range(len(taskList)):
             for j in range(t):
                 pop_push(task_data[taskList[t]])
