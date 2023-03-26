@@ -2,8 +2,7 @@
 Description: This script assigns the tasks to the available slots in the most uniform distribution feasible.  
 parameter:  Cyclic_Slide
             PLaPF (Pop Last and Push First)
-input: xlsx file. 
-output: csv file. 
+input/output: xlsx file. 
 
 # Usage
 ## Environmnet:  
@@ -12,9 +11,6 @@ Assuming conda ( [miniconda](https://docs.conda.io/en/latest/miniconda.html) ) i
 > conda activate sch   
 > pip install -r requirements.txt 
 
-## Run  
-To generate output with enum applied:    
-    `python task-distributor-v02.py input=task_data.xlsx enum=true`
+## Run     
+    `python task-distributor-v03.py input=task_data.xlsx `
 
-To generate output without enum applied:   
-    `python task-distributor-v02.py input=task_data.xlsx enum=false`
