@@ -1,9 +1,14 @@
 {   "parameters available":["Cyclic_Slide","PLaPF"],
     "parameter":"Cyclic_Slide",
-    "epoch_multiplier":20,
+    "epoch_multiplier":10,
     "enum":{
             "A":12,
             "SA":6,
             "Q":3,
-            "M":1}
+            "M":1},
+    "cost":{
+        "60":12,
+        "30":6,
+        "15":3,
+        "5":1}
 }
