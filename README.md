@@ -12,5 +12,5 @@ Assuming conda ( [miniconda](https://docs.conda.io/en/latest/miniconda.html) ) i
 > pip install -r requirements.txt 
 
 ## Run     
-    `python task-distributor-v04.py input=task_data.xlsx `
+    python task-distributor-v04.py input=task_data.xlsx 
 
