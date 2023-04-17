@@ -12,5 +12,11 @@ Assuming conda ( [miniconda](https://docs.conda.io/en/latest/miniconda.html) ) i
 > pip install -r requirements.txt 
 
 ## Run     
-    python task-distributor-v05.py input=task_data.xlsx 
+Prepare data:   
+    `python task-distributor-v05.py input=task_data.xlsx`  
 
+date wise distribution  
+    `python task-date-wise.py input="task_data.xlsx" month="JAN"`  
+    
+week wise distribution  
+    `python task-week-wise.py year=2023` 
