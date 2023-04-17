@@ -1,8 +1,6 @@
 # Task Distributor
 Description: This script assigns the tasks to the available slots in the most uniform distribution feasible.  
-parameter:  Cyclic_Slide   
-            PLaPF (Pop Last and Push First)   
-input/output: xlsx file  
+
 
 # Usage
 ## Environmnet:  
